@@ -58,7 +58,7 @@ def render(d):
     if t == "closing":
         return f'''<div class="cover">{ill("cover_bg")}<div class="cover-text">
 <h1><mark>謝謝大家！</mark></h1><div class="hand">Try It Tomorrow</div>
-<div class="meta">簡報、提示詞、示範檔案都在這個網址</div>
+<div class="meta">簡報、提示詞、示範檔案都在這個網址｜研習資料 reurl.cc/eQerxR</div>
 <div class="who"><span>周凡淇｜臺北市數位學習中心｜nora@hhups.tp.edu.tw</span></div></div></div>'''
     if t == "divider":
         return f'''<div class="divider"><div class="dv-text"><div class="kicker big">{e(d["kicker"])}</div>
