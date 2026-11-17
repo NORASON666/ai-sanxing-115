@@ -84,6 +84,8 @@ def render(d):
     if t == "shotText":
         ps = "".join(f"<p>{e(x)}</p>" for x in d["text"])
         return f'{head(d)}<div class="st"><div class="st-img"><img src="{SHOT}{d["img"]}" alt=""></div><div class="st-text">{ps}</div></div>{foot(d)}'
+    if t == "video":
+        return f'{head(d)}<div class="vid"><video controls preload="metadata" playsinline poster="assets/video/{d["poster"]}" src="assets/video/{d["src_file"]}"></video></div>{foot(d)}'
     if t == "illus":
         return f'{head(d)}<div class="illus">{ill(d["ill"])}</div>{foot(d)}'
     if t == "cards":
