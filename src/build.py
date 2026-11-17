@@ -50,8 +50,8 @@ def render(d):
     if t == "cover":
         return f'''<div class="cover">{ill("cover_bg")}
 <div class="cover-text">
-<div class="org">三興國小教師 AI 研習｜Gem・作文影片・學習單分析・作文批改・酷AI</div>
-<h1>AI 陪你教<br><mark>作文與閱讀</mark></h1>
+<div class="org">三興國小教師 AI 研習｜Canvas・skill・作文影片・學習單分析・作文批改・酷AI</div>
+<h1>AI 教學與<br><mark>行政實作</mark></h1>
 <div class="meta">2026.11.18（三）　三興國小</div>
 <div class="who"><span>臺北市數位學習中心 <b>周凡淇</b></span></div>
 </div></div>'''
