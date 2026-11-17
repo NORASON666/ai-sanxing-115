@@ -8,11 +8,11 @@ SHOT = "assets/shots/"
 ILL = "assets/illus/"
 FILE = "assets/files/"
 
-P_LINE = """附件是我們老師在 LINE 群組討論「教作文最頭痛的一件事」的紀錄（txt）。
-請用 Canvas 做成一個儀表板：
-1. 把大家的困擾分類，統計每類有幾則，做成長條圖
-2. 每一類列出 2～3 則代表性的原話
-3. 每一類提出 1 個 AI 可以幫忙的做法
+P_LINE = """附件是我們老師在 LINE 上的發想紀錄（txt），主題是「＿＿＿＿可以怎麼做成跨領域課程」。
+請用 Canvas 做成一個跨領域課程發想儀表板：
+1. 把點子依領域分類（國語、數學、自然、社會、藝術、健體、綜合、科技……），統計每個領域有幾則，做成圖表
+2. 每個領域列出 2～3 則代表性的原話
+3. 挑出 3 個最能串在一起的點子，組成一個跨領域課程草案：學習目標、各領域分工、學生成果
 4. 用顏色標出：哪些是紀錄裡原本就有的、哪些是你補充的
 字要大、適合投影。"""
 
@@ -169,14 +169,20 @@ S = [
       notes="【講稿】各家模型一直在換代，今天強的明天可能就被追過。我們不用押寶某一家，要學的是「怎麼把需求和標準講清楚」，換哪個模型都用得上。"),
 
  # ---------- 01 Canvas（30 分） ----------
- dict(t="divider", kicker="01｜暖身", title="從 LINE 群組到 Canvas", sub="大家的一句話，變成一個儀表板", ill="sec_idea",
+ dict(t="divider", kicker="01｜暖身", title="從 LINE 群組到 Canvas", sub="跨領域教學發想 → 課程儀表板", ill="sec_idea",
       notes="【講稿】第一段，先讓大家動動手，也看看 AI 能把我們的討論變成什麼。"),
- dict(t="bullets", kicker="發想｜5 分鐘", title="在 LINE 群丟出：教作文，你最頭痛的一件事", items=[
+ dict(t="video", kicker="先看一段影片", title="臺南市安平區西門實驗小學", yt="vAYzP_-3Nxc",
+      foot="看完想一想：一個主題，可以串起哪些領域？",
+      src="YouTube「PBL跨域計畫」頻道",
+      link="https://www.youtube.com/watch?v=vAYzP_-3Nxc",
+      notes="【講稿】先看一段影片：臺南西門實驗小學的 PBL 跨域課程。\n看完接著發想：一個主題可以怎麼串起不同領域？\n（影片連結：https://www.youtube.com/watch?v=vAYzP_-3Nxc ；嵌入播不了就點下方連結）"),
+ dict(t="bullets", kicker="發想｜5 分鐘", title="跨領域教學發想：題目現場公布", items=[
       "掃 QR Code 加入今天的研習 LINE 群（現場提供）",
-      "**一則一件事，越短越好**",
-      "例如：「學生不知道寫什麼」「改一班要三個晚上」",
-      "也可以丟：你最想讓 AI 幫你做的一件事"],
-      notes="【講稿】請大家掃 QR 加入今天的 LINE 群，丟出教作文最頭痛的一件事。一則一件，越短越好。按 T 開 5 分鐘。\n【行前準備】研習 LINE 群與 QR Code。"),
+      "**一則一個點子，越短越好**",
+      "想一想：這個題目可以和哪些領域、哪些單元連起來？",
+      "先求多、不批評；看到好點子按讚或接著補"],
+      foot="擴散階段先求多，等一下交給 AI 分類收斂",
+      notes="【講稿】（現場公布題目）請大家掃 QR 加入今天的 LINE 群，想想這個題目可以跟哪些領域、哪些單元接起來，一則一個點子。按 T 開 5 分鐘。\n【行前準備】研習 LINE 群與 QR Code；跨領域題目（Nora 現場問）。"),
  dict(t="steps", kicker="⚠️ 要用電腦版 LINE 才能匯出", title="把 LINE 討論匯出成 txt", steps=[
       "用 LINE 電腦版打開研習群組 → 右上角「⋮」",
       "選「儲存聊天」",
@@ -184,8 +190,8 @@ S = [
       "丟給 Gemini，開啟 Canvas"],
       foot="手機版不一定有「儲存聊天」，用電腦版最穩",
       notes="【講稿】這一步我來操作。電腦版 LINE 右上角三點，選「儲存聊天」，存成 txt。"),
- dict(t="prompt", kicker="Canvas 提示詞（可複製）", title="LINE 討論 → 作文教學困擾儀表板", text=P_LINE,
-      notes="【講稿】txt 丟進 Gemini、開 Canvas，貼這段。重點是最後一句：要它標出哪些是我們講的、哪些是它補的。\n（現場示範：切到 Canvas 成果，請大家找找看哪些是 AI 補的）\n這個儀表板也剛好是今天的課表：大家最頭痛的事，後面每一段都會碰到。"),
+ dict(t="prompt", kicker="Canvas 提示詞（可複製）", title="LINE 討論 → 跨領域課程儀表板", text=P_LINE,
+      notes="【講稿】txt 丟進 Gemini、開 Canvas，貼這段。重點是最後一句：要它標出哪些是我們講的、哪些是它補的。\n第一行的底線，換成今天現場的題目。\n（現場示範：切到 Canvas 成果，請大家找找看哪些是 AI 補的；第 3 點的課程草案可以請大家評評看能不能用）"),
  dict(t="shot", kicker="", title="田昊民老師課例：童年、夏日、棉花糖（課文）", hide_title=True, img="xihu_p10.jpg",
       notes="【講稿】再看一個老師真的用在課堂上的例子。這是西門國小田昊民老師的課例，課文是〈童年、夏日、棉花糖〉。\n（重點：課文情境 → 一個學生能玩的小機器）"),
  dict(t="shot", kicker="", title="田昊民老師課例：用 Gemini Canvas 做的「童年的棉花糖機」", hide_title=True, img="xihu_p11.jpg",
