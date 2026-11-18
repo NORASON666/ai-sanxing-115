@@ -83,7 +83,7 @@ def render(d):
         return f'{head(d)}<div class="shot two">{figs}</div>{foot(d)}'
     if t == "shotText":
         ps = "".join(f"<p>{e(x)}</p>" for x in d["text"])
-        return f'{head(d)}<div class="st"><div class="st-img"><img src="{SHOT}{d["img"]}" alt=""></div><div class="st-text">{ps}</div></div>{foot(d)}'
+        return f'{head(d)}<div class="st{' small' if d.get('small') else ''}"><div class="st-img"><img src="{SHOT}{d["img"]}" alt=""></div><div class="st-text">{ps}</div></div>{foot(d)}'
     if t == "video":
         if d.get("yt"):
             return f'{head(d)}<div class="shot video"><iframe src="https://www.youtube.com/embed/{d["yt"]}" title="{e(d["title"])}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>{foot(d)}'
